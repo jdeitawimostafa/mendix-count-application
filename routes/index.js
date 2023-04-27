@@ -13,7 +13,7 @@ router.get('/', function (req, res, next) {
 router.post('/getCountDetails', async function (req, res, next) {
 
   try {
-    const mendixToken = req?.body?.mendixToken || "4jDFgmXgwUdjfqc2n8sYMEVyyx7usjw6oxJW2tNkC93XEWV1WuKKunEsdiV1yHXS9Zm7BaEG3WQco3Xnwnodxfmp7yjfJLQrwTBi";
+    const mendixToken = req?.body?.mendixToken || process.env.MENDIXTOKEN;
     let projectId = req.body.projectId;
     let branchName;
     let numberOfEntites = 0;
